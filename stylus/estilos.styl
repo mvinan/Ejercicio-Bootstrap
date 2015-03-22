@@ -2,27 +2,36 @@
 @import "nib"
 
 animacion(parametro)
-	-webkit-animation parametro
 	-moz-animation parametro
-	-o-animation parametro
 	-ms-animation parametro
+	-o-animation parametro
+	-webkit-animation parametro
 	animation parametro
 
 blue_Cool = #006aef
+
 .relative
 	position relative
+
+.menu
+	margin 1em 0
+	
+
 
 .bar
 	background gray
 	height .5em
 	margin 1em 0
 	width 100%
+	border-radius 10px
 	.progreso
-		animation 10s state infinite linear
+		// animation 10s state infinite linear
 		background #ef8814
 		height .5em
 		margin 1em 0
 		width 50%
+		border-radius 10px
+		
 		.circle
 			height 1em
 			width 1em
@@ -32,7 +41,8 @@ blue_Cool = #006aef
 			right -.2em
 			top -.2em
 			animation 1s circle infinite
-			
+.animar
+	animation 10s state
 
 @keyframes state
 	from
