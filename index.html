@@ -12,37 +12,51 @@
     <title>Ejercicio1 - bootstrap</title>
     <link href="css/estilos.css" rel="stylesheet">
 	<!-- por arreglar este script, colocar bien la direccion -->
-    <script src="js/index.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
   </head>
 
   <body class="container">
-  	<header>
-
-  			<nav class="menu">
-	  			<ul class="nav">
-	  				<li><a href="">Home</a></li>
-	  				<li><a href="">Portafolio</a></li>
-	  				<li><a href="">Contact Us</a></li>
-	  			</ul>
-  			</nav>
-
+  	<header class="container">
+      <nav class="container-fluid">
+        <ul>
+          <li><a href=""></a>Home</li>
+          <li><a href=""></a>Portafolio</li>
+          <li><a href=""></a>Contact Us</li>
+        </ul>
+      </nav>
   	</header>
+    
+    
 
-    <div class="container-fluid" >
-    	<h1>Diseño y Desarrollo Web</h1>
-    	<p>Ayudo a las personas y empresas  a desarrollar su sitio Web de acuerdo a las necesidades del usuario. Somos la solucion perfecta para tu empresa.</p>
-    	<a href="#" class="btn btn-info btn-lg">Contact Us</a>
-    </div>
+    <section class="container row text-center jumbotron">
+    	<article class="container container-fluid">
+        <h1>Diseño y Desarrollo Web</h1>
+        <p class="col-md-12 text-center">Ayudo a las personas y empresas  a desarrollar su sitio Web de acuerdo a las necesidades del usuario. Somos la solucion perfecta para tu empresa.</p>
+      </article>
+        <a href="" class="btn btn-default btn-lg">Contact Us</a>
+    </section>
+
+    <section class="container text-center">
+      <article class="row">
+        <div class="col-md-6">
+          <h2>Inicia la animacion</h2>
+        </div>
+          <div class="col-md-6">
+            <h2>Pausa la animacion</h2>
+          </div>
+      </article>
+    </section>
 <!-- Barra de Progrreso -->
     <div class="bar">
-    	<div class="progreso relative">
+    	<div class="progreso-bar relative">
     		<div class="circle"></div>
     	</div>
     </div>
     <section>
-    	<div>
-    		<a href="" class="btn btn-info btn-lg play">Play</a>
+    	<div class="text-center">
+    		<button type="button" data-button="play" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-play"></span></button>
+    		<button type="button" data-button="stop" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-stop"></span></button>
     	</div>
     </section>
 

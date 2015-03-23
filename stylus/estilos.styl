@@ -1,6 +1,8 @@
 @import "../bootstrapStyl/bootstrap"
 @import "nib"
 
+
+
 animacion(parametro)
 	-moz-animation parametro
 	-ms-animation parametro
@@ -8,15 +10,29 @@ animacion(parametro)
 	-webkit-animation parametro
 	animation parametro
 
-blue_Cool = #006aef
+blue_Cool = #0faccd
+green_Cool = #0ccd79
+
+//modificando Bootstrap
+.btn-default
+	background-color #845ecd
+	color white
+	border none
+	box-shadow 5px 5px 7px #c2c1be
+
+.nav
+	margin-top .3em
+
+.nav > li > a:hover
+.nav > li > a:focus
+	background-color rgba(green_Cool,1)
+	color white
 
 .relative
 	position relative
-
 .menu
 	margin 1em 0
-	
-
+	border none
 
 .bar
 	background gray
@@ -24,12 +40,12 @@ blue_Cool = #006aef
 	margin 1em 0
 	width 100%
 	border-radius 10px
-	.progreso
+	.progreso-bar
 		// animation 10s state infinite linear
 		background #ef8814
 		height .5em
 		margin 1em 0
-		width 50%
+		width 0%
 		border-radius 10px
 		
 		.circle
@@ -42,7 +58,7 @@ blue_Cool = #006aef
 			top -.2em
 			animation 1s circle infinite
 .animar
-	animation 10s state
+	animation 10s state infinite
 
 @keyframes state
 	from
@@ -54,8 +70,18 @@ blue_Cool = #006aef
 
 @keyframes circle
 	0%
-		-webkit-transform scale(.7)
+		transform scale(.7)
 	100%
-		-webkit-transform scale(1.3)
+		transform scale(1.3)
 		opacity 0
-
+		
+@media screen and (min-width: 400px)
+	body
+		padding-top 5em
+		background #c2eaee
+	.btn-default
+		box-shadow 5px 5px 7px rgba(0, 0, 0, .5)
+		&:hover
+			background-color #6a4aa7
+			color white
+			box-shadow 5px 5px 7px rgba(0, 0, 0, .5)
